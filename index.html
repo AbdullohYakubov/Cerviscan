@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CERVISCAN</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="./img/cerviscan.jpeg" alt="product_logo" />
+      <h1>CERVISCAN</h1>
+    </div>
+    <form id="scanForm">
+      <label for="patientName">Patient Full Name:</label>
+      <input type="text" id="patientName" name="patientName" required />
+
+      <video id="camera" autoplay></video>
+      <button type="button" onclick="captureImage()">Capture Image</button>
+      <canvas id="canvas" style="display: none"></canvas>
+      <img id="preview" style="display: none" />
+
+      <button type="button" onclick="saveScan()">Scan and Save</button>
+    </form>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
