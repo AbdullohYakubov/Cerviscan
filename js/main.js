@@ -27,7 +27,13 @@ function captureImage() {
 
 function saveScan() {
   const patientName = document.getElementById("patientName").value;
-  if (!patientName || !preview.src.startsWith("data:image")) {
+  if (!patientName) {
+    alert("Please enter patient name first.");
+    return;
+  } else if (!preview.src.startsWith("data:image")) {
+    alert("Please capture an image first.");
+    return;
+  } else if (!patientName && !preview.src.startsWith("data:image")) {
     alert("Please enter patient name and capture an image first.");
     return;
   }
